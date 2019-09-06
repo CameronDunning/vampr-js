@@ -1,17 +1,15 @@
-const chai = require('chai');
+const chai = require("chai");
 const expect = chai.expect;
 
-const Vampire = require('../vampire.js');
+const Vampire = require("../vampire.js");
 
 describe("Vampire", function() {
-
   let rootVampire;
-  beforeEach( function() {
+  beforeEach(function() {
     rootVampire = new Vampire("root");
   });
 
   describe("addOffspring", () => {
-
     let offspring1;
     let offspring2;
     beforeEach(() => {
@@ -29,6 +27,5 @@ describe("Vampire", function() {
       expect(offspring1.creator).to.equal(rootVampire);
       expect(offspring2.creator).to.equal(rootVampire);
     });
-
   });
 });

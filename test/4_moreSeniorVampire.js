@@ -1,17 +1,15 @@
-const chai = require('chai');
+const chai = require("chai");
 const expect = chai.expect;
 
-const Vampire = require('../vampire.js');
+const Vampire = require("../vampire.js");
 
 describe("Vampire", function() {
-
   let rootVampire;
-  beforeEach( function() {
+  beforeEach(function() {
     rootVampire = new Vampire("root");
   });
 
   describe("isMoreSeniorThan", () => {
-
     let offspring1, offspring2, offspring3, offspring4;
     beforeEach(() => {
       offspring1 = new Vampire();
@@ -42,10 +40,9 @@ describe("Vampire", function() {
     it("should return true when a vampire is more senior", () => {
       expect(offspring3.isMoreSeniorThan(offspring4)).to.equal(true);
     });
-    
+
     it("should return false when a vampire is not more senior", () => {
       expect(offspring4.isMoreSeniorThan(offspring3)).to.equal(false);
     });
-
   });
 });
